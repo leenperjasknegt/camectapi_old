@@ -1,0 +1,15 @@
+ {
+ 	"actionParams": "{\"allUsers\":false,\"authType\":\"authBasicAndDigest\",\"durationMs\":5000,\"forced\":true,\"fps\":10,\"needConfirmation\":false,\"playToClient\":true,\"recordAfter\":0,\"recordBeforeMs\":1000,\"requestType\":\"\",\"streamQuality\":\"highest\",\"url\":\"http://:localhost:9000/arm\",\"useSource\":false}",
+ 	"actionResourceIds": [],
+ 	"actionType": "execHttpRequestAction",
+ 	"aggregationPeriod": 0,
+ 	"comment": "",
+ 	"disabled": true,
+ 	"eventCondition": "{\"caption\":\"Inschakelen\",\"description\":\"_lock_unlocked\",\"eventTimestampUsec\":\"0\",\"eventType\":\"undefinedEvent\",\"inputPortId\":\"0f46f1c7-e0f2-4c15-9167-9b90a4ea0575\",\"metadata\":{\"allUsers\":true,\"level\":\"0\"},\"omitDbLogging\":false,\"reasonCode\":\"none\"}",
+ 	"eventResourceIds": [],
+ 	"eventState": "Undefined",
+ 	"eventType": "softwareTriggerEvent",
+ 	"id": "{64fcc246-ca0d-46a3-b3f6-5a0910d852bc}",
+ 	"schedule": "",
+ 	"system": false
+ }
