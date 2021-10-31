@@ -8,3 +8,6 @@ Restart=always
 ExecStart=/usr/bin/python3 /home/administrator/camect/camectapi.py
 [Install]
 WantedBy=multi-user.target
+
+
+
