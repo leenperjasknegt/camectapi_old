@@ -3,11 +3,11 @@
 echo Welcom to Camect API!
 echo
 echo Creating Camect API Service
+systemctl daemon-reload
 systemctl stop camectapi 
 systemctl stop http_api 
-cp camectapi.service camectapi.service
-cp http_api.service http_api.service
-systemctl daemon-reload
+cp camectapi.service /etc/systemd/system/camectapi.service
+cp http_api.service /etc/systemd/system/http_api.service
 sleep 2
 systemctl enable camectapi
 systemctl enable http_api
