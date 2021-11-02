@@ -2,19 +2,16 @@
 
 echo Welcom to Camect API!
 echo
-echo Do not forget to turn off HTTPS traffic only in NX Witness server!
-echo Do not forget to accept the terms at https://camect.local
-echo
 echo Creating Camect API Service
 systemctl stop camectapi 
 systemctl stop http_api 
-cp /home/administrator/camect/camectapi.service /etc/systemd/system/camectapi.service
-cp /home/administrator/camect/http_api.service /etc/systemd/system/http_api.service
+cp camectapi.service camectapi.service
+cp http_api.service http_api.service
 systemctl daemon-reload
-sleep 1
+sleep 2
 systemctl enable camectapi
 systemctl enable http_api
-
+chmod +x default.sh
 
 echo NX server password:
 read varnxpassword
@@ -22,8 +19,8 @@ if [ -z "$varnxpassword" ]
 then
       echo "Nothing changed"
 else
-sed -i "14c\nxpassword = '$varnxpassword'" /home/administrator/camect/camectapi.py
-sed -i "14c\nxpasswd = '$varnxpassword'" /home/administrator/camect/http_api.py
+sed -i "14c\nxpassword = '$varnxpassword'" camectapi.py
+sed -i "14c\nxpasswd = '$varnxpassword'" camect/http_api.py
 fi
 
 echo Camect password:
@@ -32,8 +29,7 @@ if [ -z "$varcamectpassword" ]
 then
       echo "Nothing changed"
 else
-sed -i "53c\home = camect.Home("camect.local:443", "admin", "$varcamectpassword")" /home/administrator/camect/camectapi.py
-sed -i "98c\        '$varcamectpassword'" /home/administrator/camect/camectapi.py
+sed -i "15c\camectpassword = '$varcamectpassword'" camectapi.py
 fi
 
 echo Camera ID 1:
@@ -42,7 +38,7 @@ if [ -z "$varnxcamid1" ]
 then
       echo "Nothing changed"
 else
-sed -i "18c\cam1id = '$varnxcamid1'" /home/administrator/camect/camectapi.py
+sed -i "18c\cam1id = '$varnxcamid1'" camectapi.py
 fi
 
 echo Camera ID 2:
@@ -51,7 +47,7 @@ if [ -z "$varnxcamid2" ]
 then
       echo "Nothing changed"
 else
-sed -i "19c\cam2id = '$varnxcamid2'" /home/administrator/camect/camectapi.py
+sed -i "19c\cam2id = '$varnxcamid2'" camectapi.py
 fi
 
 echo Camera ID 3:
@@ -60,7 +56,7 @@ if [ -z "$varnxcamid3" ]
 then
       echo "Nothing changed"
 else
-sed -i "20c\cam3id = '$varnxcamid3'" /home/administrator/camect/camectapi.py
+sed -i "20c\cam3id = '$varnxcamid3'" camectapi.py
 fi
 
 echo Camera ID 4:
@@ -69,7 +65,7 @@ if [ -z "$varnxcamid4" ]
 then
       echo "Nothing changed"
 else
-sed -i "21c\cam4id = '$varnxcamid4'" /home/administrator/camect/camectapi.py
+sed -i "21c\cam4id = '$varnxcamid4'" camectapi.py
 fi
 
 echo Camera ID 5:
@@ -78,7 +74,7 @@ if [ -z "$varnxcamid5" ]
 then
       echo "Nothing changed"
 else
-sed -i "22c\cam5id = '$varnxcamid5'" /home/administrator/camect/camectapi.py
+sed -i "22c\cam5id = '$varnxcamid5'" camectapi.py
 fi
 
 echo Camera ID 6:
@@ -87,7 +83,7 @@ if [ -z "$varnxcamid6" ]
 then
       echo "Nothing changed"
 else
-sed -i "23c\cam6id = '$varnxcamid6'" /home/administrator/camect/camectapi.py
+sed -i "23c\cam6id = '$varnxcamid6'" camectapi.py
 fi
 
 echo Camera ID 7:
@@ -96,7 +92,7 @@ if [ -z "$varnxcamid7" ]
 then
       echo "Nothing changed"
 else
-sed -i "24c\cam7id = '$varnxcamid7'" /home/administrator/camect/camectapi.py
+sed -i "24c\cam7id = '$varnxcamid7'" camectapi.py
 fi
 
 echo Camera ID 8:
@@ -105,7 +101,7 @@ if [ -z "$varnxcamid8" ]
 then
       echo "Nothing changed"
 else
-sed -i "25c\cam8id = '$varnxcamid8'" /home/administrator/camect/camectapi.py
+sed -i "25c\cam8id = '$varnxcamid8'" camectapi.py
 fi
 
 
