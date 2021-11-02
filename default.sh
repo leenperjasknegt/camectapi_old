@@ -14,10 +14,10 @@ echo Resetting Camect API ...
 systemctl stop camectapi
 systemctl stop http_api
 
-rm /home/camect/camectapi.py
-rm /home/camect/http_api.py
+rm camectapi.py
+rm http_api.py
 
-cp /home/camect/default/camectapi.py /home/camect/camectapi.py
-cp /home/camect/default/http_api.py /home/camect/http_api.py
+cp /default/camectapi.py camectapi.py
+cp /default/http_api.py http_api.py
 echo
 echo Done!
