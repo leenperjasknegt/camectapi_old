@@ -11,7 +11,6 @@ cp http_api.service /etc/systemd/system/http_api.service
 sleep 2
 systemctl enable camectapi
 systemctl enable http_api
-chmod +x default.sh
 
 echo NX server password:
 read varnxpassword
