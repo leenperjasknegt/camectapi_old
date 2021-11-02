@@ -20,7 +20,7 @@ then
       echo "Nothing changed"
 else
 sed -i "14c\nxpassword = '$varnxpassword'" camectapi.py
-sed -i "14c\nxpasswd = '$varnxpassword'" camect/http_api.py
+sed -i "14c\nxpasswd = '$varnxpassword'" http_api.py
 fi
 
 echo Camect password:
