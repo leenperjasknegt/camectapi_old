@@ -1,5 +1,5 @@
  {
- 	"actionParams": "{\"allUsers\":false,\"authType\":\"authBasicAndDigest\",\"durationMs\":5000,\"forced\":true,\"fps\":10,\"needConfirmation\":false,\"playToClient\":true,\"recordAfter\":0,\"recordBeforeMs\":1000,\"requestType\":\"\",\"streamQuality\":\"highest\",\"url\":\"http://:localhost:9000/arm\",\"useSource\":false}",
+ 	"actionParams": "{\"allUsers\":false,\"authType\":\"authBasicAndDigest\",\"durationMs\":5000,\"forced\":true,\"fps\":10,\"needConfirmation\":false,\"playToClient\":true,\"recordAfter\":0,\"recordBeforeMs\":1000,\"requestType\":\"\",\"streamQuality\":\"highest\",\"url\":\"http://localhost:9000/disarm\",\"useSource\":false}",
  	"actionResourceIds": [],
  	"actionType": "execHttpRequestAction",
  	"aggregationPeriod": 0,
